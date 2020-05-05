@@ -13,7 +13,7 @@ $f3 = Base::instance();
 $f3->route('GET /', function ($f3) {
     //echo '<h1>Week 5</h1>';
 
-    //create variables in the F3 hive
+    //Create variables in the F3 hive
     $f3->set('username', 'jshmo');
     $f3->set('password', sha1('Password01'));
     $f3->set('title', 'Working with Template');
@@ -21,16 +21,16 @@ $f3->route('GET /', function ($f3) {
     $f3->set('color', 'purple');
     $f3->set('radius', 2);
 
-    //define an array of fruits
+    //Define an array of fruits
     $f3->set('fruits', array('apple', 'orange', 'banana'));
     $f3->set('bookmarks', array('http://www.cnet.com', 'http://www.reddit.com/r/news', 'http://edition.cnn.com/sport'));
 
-    //define an associative array
+    //Define an associative array of desserts
     $f3->set('addresses', array('primary' => '1000 Apple Ln. Seattle, Wa 98999', 'secondary' => '2510 100th Court Tac, Wa 90000'));
 
     $f3->set('desserts', array('chocolate' => 'Chocolate Mousse', 'vanilla' => 'Vanilla Custard', 'strawberry' => 'Strawberry Shortcake'));
 
-    //display the template/view
+    //Display the template/view
     $view = new Template();
     echo $view->render('views/info.html');
 });
